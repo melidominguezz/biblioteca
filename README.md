@@ -1,6 +1,6 @@
 # Sistema de Gestión para una Biblioteca
 Trabajo Practico Obligatorio Algoritmos I - UADE
-Autores: Barrón, Melina -  Di Laudo, Camila - Melián, Daniela 
+Autores: Barrón, Melina -  Di Laudo, Camila - Melián, Daniela | Equipo 8
 
 ## 🚀 Getting Started
 
