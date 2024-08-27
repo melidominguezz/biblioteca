@@ -2,20 +2,20 @@
 Trabajo Practico Obligatorio Algoritmos I - UADE  
 Autores: Barrón, Melina -  Di Laudo, Camila - Melián, Daniela | Equipo 8
 
-# Funciones
+# 🐍 Funciones
 
 ### Barron, Melina  
-busqueda_libros  
-cargar_libros  
-obtener_libros 
+ - busqueda_libros  
+ - cargar_libros  
+ - obtener_libros 
 ### Di Laudo, Camila  
-registrar_usuarios  
-editar_libros 
-main
+ - registrar_usuarios  
+ - editar_libros 
+ - main
 ### Melian, Daniela  
-recomendar_libros  
-login_usuario  
-cambiar_status_usuario  
+ - recomendar_libros  
+ - login_usuario  
+ - cambiar_status_usuario  
 
 ## 🚀 Getting Started
 
