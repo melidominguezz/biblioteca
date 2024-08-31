@@ -1,8 +1,25 @@
+import books_data as bd
+
+
 def busqueda_libros(clave, valor):
     """Búsqueda de libros segun: título, autor, género, ISBN, editorial, año de publicación, serie.
     :param clave: Str, nombre del campo por el cual se quiere realizar la búsqueda.
     :param valor: Str, valor del campo por el cual se quiere realizar la búsqueda.
     :return libros: List, lista de titulos de libros que coinciden con la clave-valor enviados anteriormente y su status. """
+    libros = []
+    clave_posicion = [["autor", 0], ["titulo", 1], ["genero", 2], ["ISBN", 3], ["editorial", 4],
+                      ["año de publicacion", 5],
+                      ["serie", 6], ["nro de paginas", 7], ["ejemplares", 8]]
+
+    indice = [caracteristica[1] for caracteristica in clave_posicion if clave == caracteristica[0]][0]
+
+    for libro in bd.libros:
+        if libro[indice] == valor:
+            titulo = libro[1]
+            disponibilidad = libro[9]
+            libros.append([titulo, disponibilidad])
+
+    return libros
 
 
 def cargar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares):
@@ -18,13 +35,34 @@ def cargar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, seri
     :param cant_ejemplares: Int, cantidad de ejemplares del mismo libro que se está cargando.
     :return libros_cargados: List, lista de libros cargados a la biblioteca. """
 
+    nuevo_libro = []
+    # chequear si el libro ya existe en la biblioteca
 
-def obtener_libro(id_libro, ISBN):
+    libros = sum(fila.count(ISBN) for fila in bd.libros)
+    if libros > 0:
+        for i, libro in enumerate(bd.libros):
+            if libro[3] == ISBN:
+                bd.libros[i][8] += cant_ejemplares
+
+    else:
+        nuevo_libro = [autor, titulo, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas,
+                       cant_ejemplares, True]
+        bd.libros.append(nuevo_libro)
+
+    return bd.libros
+
+
+def obtener_libro(ISBN):
     """ Obtener un libro y su detalle segun su id interno o ISBN.
-        :param id_libro: Str, titulo del libro.
         :param ISBN: Int, International Standard Book Number del libro.
         :return libro: Dict, informacion detallada del libro buscado.
         """
+    libro_encontrado = None
+    for libro in bd.libros:
+        if libro[3] == ISBN:
+            libro_encontrado = libro
+
+    return libro_encontrado
 
 
 # Tenemos la lista con todos los libros disponibles
