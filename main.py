@@ -13,7 +13,7 @@ while numero != "1" and numero != "2":
 if numero == "1":
     # Iniciar_Seción = funcion_iniciar seción
 else:
-    registrar = registrar_usuario (Lista_Usuarios, Lista_Contrasenas)
+    registrar = registrar_usuario(Lista_Usuarios, Lista_Contrasenas)
 
 # SI EL USUARIO QUE INICIA SECIÓN ES EL CLIENTE
 if inicar_sesion == cliente: 
