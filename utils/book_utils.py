@@ -94,10 +94,10 @@ else:
     print("No contamos con ese libro en nuestra biblioteca")
 
 def editar_libros (titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares, isbn_editar)
-    """ Busca el libro por ISBN """
+    # Busca el libro por ISBN 
     for libro in libros:
         if libro[3] == isbn_editar:
-            """ Pregunta al usuario que va a editar """
+            # Pregunta al usuario que va a editar
             print("Libro encontrado : ")
             print(f"1. Autor: {bd.libros[i][0]}")
             print(f"2. Título: {bd.libros[i][1]}")
