@@ -92,3 +92,41 @@ elif libro_buscado == "en_espera":
     print("Ahora está reservado, pero vuelve")
 else:
     print("No contamos con ese libro en nuestra biblioteca")
+
+def editar_libros (titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares, isbn_editar)
+    """ Busca el libro por ISBN """
+    for libro in libros:
+        if libro[3] == isbn_editar:
+            """ Pregunta al usuario que va a editar """
+            print("Libro encontrado : ")
+            print(f"1. Autor: {bd.libros[i][0]}")
+            print(f"2. Título: {bd.libros[i][1]}")
+            print(f"3. Género: {bd.libros[i][2]}")
+            print(f"4. Editorial: {bd.libros[i][4]}")
+            print(f"5. Año de Publicación: {bd.libros[i][5]}")
+            print(f"6. Serie de Libros: {bd.libros[i][6]}")
+            print(f"7. Número de Páginas: {bd.libros[i][7]}")
+            print(f"8. Cantidad de Ejemplares: {bd.libros[i][8]}")
+            numero = input("Ingresá un número para editar : ")
+            if numero == "1":
+                bd.libros[i][0] = input("Ingrese el nuevo autor: ")
+            elif numero == "2":
+                bd.libros[i][1] = input("Ingrese el nuevo título: ")
+            elif numero == "3":
+                bd.libros[i][2] = input("Ingrese el nuevo género: ")
+            elif numero == "4":
+                bd.libros[i][4] = input("Ingrese la nueva editorial: ")
+            elif numero == "5":
+                bd.libros[i][5] = int(input("Ingrese el nuevo año de publicación: "))
+            elif numero == "6":
+                bd.libros[i][6] = input("Ingrese la nueva serie : ")
+            elif numero == "7":
+                bd.libros[i][7] = int(input("Ingrese el nuevo número de páginas: "))
+            elif numero == "8":
+                bd.libros[i][8] = int(input("Ingrese la nueva cantidad de ejemplares: "))
+            else:
+                print("Número no reconocido. No se realizó ningún cambio.")
+            return bd.libros[i]
+
+    print("No se encontró un libro con ese ISBN.")
+    return None
