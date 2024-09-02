@@ -16,27 +16,34 @@ else:
     registrar = registrar_usuario (Lista_Usuarios, Lista_Contrasenas)
 
 # SI EL USUARIO QUE INICIA SECIÓN ES EL CLIENTE
-if inicar_secion == cliente
+if inicar_sesion == cliente: 
     print("1- Buscar libros.")
     print("2- Obtener libro.")
     numero = input("Ingresá un número : ")
     while numero != "1" and numero != "2":
-        if numero == "1":
-            buscar_libros = busqueda_libros(Clave, Valor)
-        else:
-            alquilar_libro = obtener_libro(id_libro, ISBN)
+        print("1- Buscar libros.")
+        print("2- Obtener libro.")
+        numero = input("Ingresá un número : ")
+    if numero == "1":
+        buscar_libros = busqueda_libros(Clave, Valor)
+    else:
+        alquilar_libro = obtener_libro(id_libro, ISBN)
 
 # SI EL USUARIO QUE INICIA SECIÓN ES EL BIBLIOTECARIO
 else:
-    if iniciar_secion == bibliotecario:
+    if iniciar_sesion == bibliotecario:
         print("1- Cargar libros.")
         print("2- Editar libro.")
         print("3- Cambiar Status.")
         numero = input("Ingresá un número : ")
         while numero != "1" and numero != "2" and numero != "3":
-            if numero == "1":
-                registrar_libros = cargar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares)
-            elif numero == "2":
-                editar = editar_libros
-            else: 
-                cambiar_status = cambiar()
+            print("1- Cargar libros.")
+            print("2- Editar libro.")
+            print("3- Cambiar Status.")
+            numero = input("ERROR. Ingresá un número : ")
+        if numero == "1":
+            registrar_libros = cargar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares)
+        elif numero == "2":
+            editar = editar_libros
+        else: 
+            cambiar_status = cambiar()
