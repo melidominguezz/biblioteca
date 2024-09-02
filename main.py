@@ -44,7 +44,8 @@ else:
         if numero == "1":
             registrar_libros = cargar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares)
         elif numero == "2":
-            editar = editar_libros
+            ISBN_editar = int(input("Ingrese el ISBN que quiere editar: "))
+            editar = editar_libros(titulo, autor, genero, ISBN, editorial, anio_publicacion, serie_libros, nro_paginas, cant_ejemplares, ISBN_editar)
         else: 
             libro = input("Ingrese el libro de su consulta")
             libro_buscado = estatus_libros(libro)
