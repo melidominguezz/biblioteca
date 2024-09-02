@@ -46,4 +46,11 @@ else:
         elif numero == "2":
             editar = editar_libros
         else: 
-            cambiar_status = cambiar()
+            libro = input("Ingrese el libro de su consulta")
+            libro_buscado = estatus_libros(libro)
+            if libro_buscado == "disponible":
+                print("lo tenemos")
+            elif libro_buscado == "en_espera":
+                print("Ahora está reservado, pero vuelve")
+            else:
+                print("No contamos con ese libro en nuestra biblioteca")
