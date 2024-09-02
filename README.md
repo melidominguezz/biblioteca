@@ -4,18 +4,19 @@ Autores: Barrón, Melina -  Di Laudo, Camila - Melián, Daniela | Equipo 8
 
 # 🐍 Funciones
 
-### Barron, Melina  
- - busqueda_libros  
- - cargar_libros  
- - obtener_libros 
+### Barron, Melina
+ - recomendar_libros  
+ - login_usuario  
+ - cambiar_status_usuario
+    
 ### Di Laudo, Camila  
  - registrar_usuarios  
  - editar_libros 
  - main
 ### Melian, Daniela  
- - recomendar_libros  
- - login_usuario  
- - cambiar_status_usuario  
+  - busqueda_libros  
+ - cargar_libros  
+ - obtener_libros  
 
 ## 🚀 Getting Started
 
